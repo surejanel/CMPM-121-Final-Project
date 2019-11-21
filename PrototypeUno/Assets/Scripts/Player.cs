@@ -23,9 +23,15 @@ public class Player : MonoBehaviour {
   }
 
   void MovePlayer() {
+    if (Input.GetButton("Horizontal")) {
+      var horizontalMove = Input.GetAxis("Horizontal") * Time.deltaTime * 150;
+      transform.Rotate(0, horizontalMove, 0);
+    }
+
+
     if(controller.isGrounded) {
       moveDirection = new Vector3(
-        Input.GetAxis("Horizontal"),
+        0.0f,
         0.0f,
         Input.GetAxis("Vertical")
       );
@@ -34,6 +40,12 @@ public class Player : MonoBehaviour {
 
     moveDirection.y -= gravity * Time.deltaTime;
 
-    controller.Move(moveDirection * Time.deltaTime);
+    Vector3 move = new Vector3(
+      moveDirection.x * Vector3.forward.x,
+      moveDirection.y * Vector3.forward.y,
+      moveDirection.z
+    );
+
+    controller.Move(transform.rotation * moveDirection * Time.deltaTime);
   }
 }
