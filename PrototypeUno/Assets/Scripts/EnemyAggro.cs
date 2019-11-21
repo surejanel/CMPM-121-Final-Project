@@ -18,7 +18,7 @@ public class EnemyAggro : MonoBehaviour {
       // update enemy position
       var transform = enemy.GetComponent<Transform>();
       var playerPos = player.GetComponent<Transform>().localPosition;
-      transform.Translate(playerPos.x, 0.0f, playerPos.z);
+      transform.Translate(playerPos.x, 4.0f, playerPos.z);
     }
   }
 
