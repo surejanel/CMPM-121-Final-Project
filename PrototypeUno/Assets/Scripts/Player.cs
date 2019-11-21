@@ -14,7 +14,6 @@ public class Player : MonoBehaviour {
     controller = this.GetComponent<CharacterController>();
 
     speed = 10.0f;
-    jumpSpeed = 8.0f;
     gravity = 20.0f;
   }
 
@@ -31,10 +30,6 @@ public class Player : MonoBehaviour {
         Input.GetAxis("Vertical")
       );
       moveDirection *= speed;
-
-      if(Input.GetButton("Jump")) {
-        moveDirection.y = jumpSpeed;
-      }
     }
 
     moveDirection.y -= gravity * Time.deltaTime;
