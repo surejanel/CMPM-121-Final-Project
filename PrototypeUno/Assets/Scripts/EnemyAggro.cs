@@ -18,8 +18,11 @@ public class EnemyAggro : MonoBehaviour {
       // update enemy position
       // Vector3 direction = player.position - transform.position;
       // float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
-      // this.GetComponent<RigidBody>().rotation = angle;
+      // this.GetComponent<Transform>().rotation = angle;
       // direction.Normalize();
+      // float temp = direction.y;
+      // direction.y = 0.0f;
+      // direction.z = temp;
       // movement = direction;
 
       // var transform = enemy.GetComponent<Transform>();
