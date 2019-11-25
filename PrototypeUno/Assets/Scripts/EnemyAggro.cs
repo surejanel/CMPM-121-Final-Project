@@ -16,9 +16,20 @@ public class EnemyAggro : MonoBehaviour {
   void Update() {
     if(aggroOn) {
       // update enemy position
-      var transform = enemy.GetComponent<Transform>();
-      var playerPos = player.GetComponent<Transform>().localPosition;
-      transform.Translate(playerPos.x, 4.0f, playerPos.z);
+      // Vector3 direction = player.position - transform.position;
+      // float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
+      // this.GetComponent<Transform>().rotation = angle;
+      // direction.Normalize();
+      // float temp = direction.y;
+      // direction.y = 0.0f;
+      // direction.z = temp;
+      // movement = direction;
+
+      // var transform = enemy.GetComponent<Transform>();
+      // var playerPos = player.GetComponent<Transform>().localPosition;
+      // var x = playerPos.x;
+      // var z = playerPos.z;
+      // transform.Translate(x, 0.0f, z);
     }
   }
 

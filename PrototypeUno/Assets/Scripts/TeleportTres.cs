@@ -17,7 +17,7 @@ public class TeleportTres : MonoBehaviour {
     if(other.tag == "Player") {
       CharacterController player = other.GetComponent<CharacterController>();
       var transform = other.GetComponent<Transform>();
-      Vector3 newPosition = new Vector3(0.0f, 2.0f, 0.0f);
+      Vector3 newPosition = new Vector3(0.0f, 2.0f, -10.0f);
       player.enabled = false;
       transform.position = newPosition;
       player.enabled = true;
