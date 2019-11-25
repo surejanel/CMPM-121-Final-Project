@@ -17,7 +17,7 @@ public class TeleportDos : MonoBehaviour {
     if(other.tag == "Player") {
       CharacterController player = other.GetComponent<CharacterController>();
       var transform = other.GetComponent<Transform>();
-      Vector3 newPosition = new Vector3(0.0f, 2.0f, 195.0f);
+      Vector3 newPosition = new Vector3(0.0f, 2.0f, 197.0f);
       player.enabled = false;
       transform.position = newPosition;
       player.enabled = true;

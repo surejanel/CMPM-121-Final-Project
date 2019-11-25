@@ -17,7 +17,7 @@ public class TeleportQuatro : MonoBehaviour {
     if(other.tag == "Player") {
       CharacterController player = other.GetComponent<CharacterController>();
       var transform = other.GetComponent<Transform>();
-      Vector3 newPosition = new Vector3(0.0f, 2.0f, 110.0f);
+      Vector3 newPosition = new Vector3(0.0f, 2.0f, 131.0f);
       player.enabled = false;
       transform.position = newPosition;
       player.enabled = true;
