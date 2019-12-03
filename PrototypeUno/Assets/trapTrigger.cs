@@ -27,13 +27,18 @@ public class trapTrigger : MonoBehaviour
 
 		  // Make the scale on the Y increase.
 	   	// Then make it so if you connect with the hidden cube, the scene resets. Using these two lines:
-		   PlayerDeathSFX.PlayerDeathSound.Play();
+		  PlayerDeathSFX.PlayerDeathSound.Play();
 
-       //spike go up
-       trapTransform.position = Vector3.Lerp( trapTransform.position,
-                                              new Vector3(trapTransform.position.x, 1,
-                                              trapTransform.position.z),
-                                              1);
+      //spike go up
+      trapTransform.position = Vector3.Lerp(
+        trapTransform.position,
+        new Vector3(
+          trapTransform.position.x,
+          1,
+          trapTransform.position.z
+        ),
+        1
+      );
 
        //reload when the player collides with it
        if(other.gameObject.CompareTag("Player")) {
