@@ -22,5 +22,14 @@ public class TeleportSeis : MonoBehaviour {
       transform.position = newPosition;
       player.enabled = true;
     }
+
+    if(other.tag == "Monster") {
+      GameObject monster = other.gameObject;
+      var transform = other.GetComponent<Transform>();
+      Vector3 newPosition = new Vector3(0.0f, 2.0f, 265.0f);
+      monster.SetActive(false);
+      transform.position = newPosition;
+      monster.SetActive(true);
+    }
   }
 }

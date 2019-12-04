@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1070,13 +1070,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443556832}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e846530b62597457f84f415a9c36cfe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressurePlate: {fileID: 0}
-  trap: {fileID: 0}
+  pressurePlate: {fileID: 443556832}
+  trap: {fileID: 1532722364}
 --- !u!1 &465720349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1178,10 @@ PrefabInstance:
     - target: {fileID: 1880776661035598, guid: 390c3e301d761084694df43e15a0d9bb, type: 3}
       propertyPath: m_Name
       value: Right Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880776661035598, guid: 390c3e301d761084694df43e15a0d9bb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4167280390644254, guid: 390c3e301d761084694df43e15a0d9bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2523,6 +2527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Middle Trap
       objectReference: {fileID: 0}
+    - target: {fileID: 1880776661035598, guid: 390c3e301d761084694df43e15a0d9bb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4167280390644254, guid: 390c3e301d761084694df43e15a0d9bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.32
@@ -2610,6 +2618,10 @@ PrefabInstance:
     - target: {fileID: 1880776661035598, guid: 390c3e301d761084694df43e15a0d9bb, type: 3}
       propertyPath: m_Name
       value: Left Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880776661035598, guid: 390c3e301d761084694df43e15a0d9bb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4167280390644254, guid: 390c3e301d761084694df43e15a0d9bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4512,7 +4524,7 @@ GameObject:
   - component: {fileID: 1748053320}
   - component: {fileID: 1748053319}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Heaven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5016,6 +5028,7 @@ GameObject:
   - component: {fileID: 1821653865}
   - component: {fileID: 1821653867}
   - component: {fileID: 1821653866}
+  - component: {fileID: 1821653868}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -5091,7 +5104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821653858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3, y: 2.1, z: 228}
+  m_LocalPosition: {x: -1.3, y: 3, z: 228}
   m_LocalScale: {x: 1, y: 2, z: 3}
   m_Children:
   - {fileID: 1058852394}
@@ -5413,6 +5426,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &1821653868
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821653858}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2027964764
 GameObject:
   m_ObjectHideFlags: 0

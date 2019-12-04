@@ -34,10 +34,8 @@ public class trapTrigger : MonoBehaviour
 
     //reload when the player collides with it
     if(other.gameObject.CompareTag("Player")) {
-      Debug.Log("ur dead bich");
-      // SceneManager.LoadScene("Prototype One");
-    } else {
-      Debug.Log("fuck");
+      // Debug.Log("ur dead bich");
+      SceneManager.LoadScene("Prototype One");
     }
 
     if(other.gameObject.CompareTag("Monster")) {
